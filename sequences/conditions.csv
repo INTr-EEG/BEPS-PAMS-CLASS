@@ -13,7 +13,7 @@ BEPS,17,15,choice,rectangle,17_BEPS-15-rectangle
 BEPS,18,16,choice,cookie3,18_BEPS-16-cookie
 PAMS,19,1,choice,flowers4,19_PAMS-1-flower
 PAMS,20,2,choice,no,20_PAMS-2-human
-PAMS,21,3,text,10,21_PAMS-3-apple1
+PAMS,21,3,choice,10,21_PAMS-3-apple1
 PAMS,22,4,text,9,22_PAMS-4-apple2
 PAMS,23,5,choice,9,23_PAMS-5-9or6
 PAMS,24,6,choice,12,24_PAMS-6-8or12
