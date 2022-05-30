@@ -781,8 +781,8 @@ async function experimentInit() {
   // Initialize components for Routine "trialChoice"
   trialChoiceClock = new util.Clock();
   MAX_OPTIONS = 7;
-  ALL_REDBOX_TARGETS = {"39": ["heavy", "happy", "slow"], "40": ["big", "dark", "heavy"], "44": ["played", "playing", "play"], "45": ["or", "and", "with"], "46": ["underneath", "below", "on", "under", "beside", "at", "above"], "48": ["cup", "duck", "apple", "vase"], "51": ["boy_is", "boys_are"], "52": ["smell", "smelly"], "53": ["leaf", "cup", "book"], "54": ["dice", "map", "rice"], "55": ["car", "house", "mat"], "56": ["sunshine", "shine", "sun"], "57": ["bow", "ox", "box"], "61": ["goose", "monkey"], "62": ["under", "untie", "undo"], "63": ["moonset", "moonlight", "moondown"], "64": ["resmall", "rethink", "reheart"], "65": ["sandless", "sandful", "sandy"]};
-  ALL_REDBOX_TIMES = {"39": [5.2, 4.3, 3.7, 3.0], "40": [4.8, 4.0, 3.2, 2.5], "44": [14.0, 11.0, 7.4, 4.3], "45": [13.0, 10.9, 8.0, 5.0], "46": [9.8, 8.8, 8.0, 7.2, 6.5, 5.8, 5.0, 4.2], "48": [7.7, 7.0, 6.3, 5.2, 4.3], "51": [8.6, 7.1, 4.3], "52": [8.2, 6.6, 4.1], "53": [6.4, 5.4, 4.4, 3.4], "54": [6.6, 5.6, 4.6, 3.6], "55": [6.5, 5.5, 4.5, 3.5], "56": [8.6, 7.6, 6.6, 5.6], "57": [6.3, 5.5, 4.7, 3.8], "61": [6.0, 5.1, 4.0], "62": [11.0, 10.3, 9.5, 8.5], "63": [9.8, 8.8, 7.8, 6.8], "64": [8.5, 7.7, 6.8, 5.8], "65": [8.1, 7.2, 6.3, 5.3]};
+  ALL_REDBOX_TARGETS = {"39": ["heavy", "happy", "slow"], "40": ["big", "dark", "heavy"], "44": ["played", "playing"], "45": ["or", "and", "with"], "46": ["underneath", "below", "on", "under", "beside", "at", "above"], "48": ["cup", "duck", "apple", "vase"], "51": ["boy_is", "boys_are"], "52": ["smell", "smelly"], "53": ["book", "cup", "leaf"], "54": ["dice", "map", "rice"], "55": ["car", "house", "mat"], "56": ["sunshine", "shine", "sun"], "57": ["bow", "ox", "box"], "61": ["goose", "monkey"], "62": ["under", "untie", "undo"], "63": ["moonset", "moonlight", "moondown"], "64": ["resmall", "rethink", "reheart"], "65": ["sandless", "sandful", "sandy"]};
+  ALL_REDBOX_TIMES = {"39": [5.2, 4.3, 3.7, 3.0], "40": [4.8, 4.0, 3.2, 2.5], "44": [10.8, 7.4, 4.1], "45": [13.0, 10.9, 8.0, 5.0], "46": [9.8, 8.8, 8.0, 7.2, 6.5, 5.8, 5.0, 4.2], "48": [7.7, 7.0, 6.3, 5.2, 4.3], "51": [8.6, 7.1, 4.3], "52": [8.2, 6.6, 4.1], "53": [6.4, 5.4, 4.4, 3.4], "54": [6.6, 5.6, 4.6, 3.6], "55": [6.5, 5.5, 4.5, 3.5], "56": [8.6, 7.6, 6.6, 5.6], "57": [6.3, 5.5, 4.7, 3.8], "61": [6.0, 5.1, 4.0], "62": [11.0, 10.3, 9.5, 8.5], "63": [9.8, 8.8, 7.8, 6.8], "64": [8.5, 7.7, 6.8, 5.8], "65": [8.1, 7.2, 6.3, 5.3]};
   repeat_prev = false;
   cimgs = [];
   cimg_names = [];
@@ -1333,10 +1333,6 @@ function trialChoiceRoutineEachFrame() {
     // update/draw components on each frame
     if (is_choice) {
         if (USE_AUDIO) {
-            /* Work around until we get new audio */
-            if (((slide_num === "21") && (t > 2.65))) {
-                trial_sound.stop();
-            }
             if ((redbox_targets.length > 0)) {
                 if ((t >= redbox_time)) {
                     for (var cimg, _pj_c = 0, _pj_a = cimgs, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
