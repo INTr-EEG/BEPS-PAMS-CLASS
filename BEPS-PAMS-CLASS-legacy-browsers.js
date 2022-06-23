@@ -149,12 +149,6 @@ psychoJS.start({
     {'name': 'aud/mp3/03_BEPS-2-yellow.mp3', 'path': 'aud/mp3/03_BEPS-2-yellow.mp3'},
     {'name': 'aud/mp3/04_BEPS-3-red.mp3', 'path': 'aud/mp3/04_BEPS-3-red.mp3'},
     {'name': 'aud/mp3/05_BEPS-4,5,6-color.mp3', 'path': 'aud/mp3/05_BEPS-4,5,6-color.mp3'},
-    {'name': 'aud/mp3/08_BEPS-7-square.mp3', 'path': 'aud/mp3/08_BEPS-7-square.mp3'},
-    {'name': 'aud/mp3/09_BEPS-8-triangle.mp3', 'path': 'aud/mp3/09_BEPS-8-triangle.mp3'},
-    {'name': 'aud/mp3/10_BEPS-9-letterA.mp3', 'path': 'aud/mp3/10_BEPS-9-letterA.mp3'},
-    {'name': 'aud/mp3/11_BEPS-10-letterB.mp3', 'path': 'aud/mp3/11_BEPS-10-letterB.mp3'},
-    {'name': 'aud/mp3/12_BEPS-11-letterC.mp3', 'path': 'aud/mp3/12_BEPS-11-letterC.mp3'},
-    {'name': 'aud/mp3/13_BEPS-12-name.mp3', 'path': 'aud/mp3/13_BEPS-12-name.mp3'},
     {'name': 'aud/mp3/14_BEPS-13a-pattern1-rep.mp3', 'path': 'aud/mp3/14_BEPS-13a-pattern1-rep.mp3'},
     {'name': 'aud/mp3/14_BEPS-13a-pattern1.mp3', 'path': 'aud/mp3/14_BEPS-13a-pattern1.mp3'},
     {'name': 'aud/mp3/15_BEPS-13b-pattern2.mp3', 'path': 'aud/mp3/15_BEPS-13b-pattern2.mp3'},
@@ -734,12 +728,10 @@ async function experimentInit() {
       return make_boxes(names, xys, sizes);
   }
   
-  // expInfo["Debug"] = "No";
-  // expInfo["Audio"] = "Yes";
+//   expInfo["Debug"] = "No";
+//   expInfo["Audio"] = "Yes";
   SHOW_DEBUG = (expInfo["Debug"] === "Yes");
   USE_AUDIO = (expInfo["Audio"] === "Yes");
-  console.log("expInfo");
-  console.log(expInfo);
   is_drawing = false;
   CLICK_BOX_OPACITY = (SHOW_DEBUG ? 0.25 : 0);
   SLIDE_SIZE = [1.2, 0.675];
@@ -781,8 +773,8 @@ async function experimentInit() {
   // Initialize components for Routine "trialChoice"
   trialChoiceClock = new util.Clock();
   MAX_OPTIONS = 7;
-  ALL_REDBOX_TARGETS = {"39": ["heavy", "happy", "slow"], "40": ["big", "dark", "heavy"], "44": ["played", "playing"], "45": ["or", "and", "with"], "46": ["underneath", "below", "on", "under", "beside", "at", "above"], "48": ["cup", "duck", "apple", "vase"], "51": ["boy_is", "boys_are"], "52": ["smell", "smelly"], "53": ["book", "cup", "leaf"], "54": ["dice", "map", "rice"], "55": ["car", "house", "mat"], "56": ["sunshine", "shine", "sun"], "57": ["bow", "ox", "box"], "61": ["goose", "monkey"], "62": ["under", "untie", "undo"], "63": ["moonset", "moonlight", "moondown"], "64": ["resmall", "rethink", "reheart"], "65": ["sandless", "sandful", "sandy"]};
-  ALL_REDBOX_TIMES = {"39": [5.2, 4.3, 3.7, 3.0], "40": [4.8, 4.0, 3.2, 2.5], "44": [10.8, 7.4, 4.1], "45": [13.0, 10.9, 8.0, 5.0], "46": [9.8, 8.8, 8.0, 7.2, 6.5, 5.8, 5.0, 4.2], "48": [7.7, 7.0, 6.3, 5.2, 4.3], "51": [8.6, 7.1, 4.3], "52": [8.2, 6.6, 4.1], "53": [6.4, 5.4, 4.4, 3.4], "54": [6.6, 5.6, 4.6, 3.6], "55": [6.5, 5.5, 4.5, 3.5], "56": [8.6, 7.6, 6.6, 5.6], "57": [6.3, 5.5, 4.7, 3.8], "61": [6.0, 5.1, 4.0], "62": [11.0, 10.3, 9.5, 8.5], "63": [9.8, 8.8, 7.8, 6.8], "64": [8.5, 7.7, 6.8, 5.8], "65": [8.1, 7.2, 6.3, 5.3]};
+  ALL_REDBOX_TARGETS = {"44": ["played", "playing"], "51": ["boy_is", "boys_are"], "52": ["smell", "smelly"], "53": ["book", "cup", "leaf"], "54": ["dice", "map", "rice"], "55": ["car", "house", "mat"], "61": ["goose", "monkey"], "64": ["resmall", "rethink", "reheart"]};
+  ALL_REDBOX_TIMES = {"44": [10.8, 7.4, 4.1], "51": [7.2, 5.9, 4.0], "52": [7.5, 5.6, 3.9], "53": [6.4, 5.4, 4.4, 3.4], "54": [6.6, 5.6, 4.6, 3.6], "55": [6.5, 5.0, 4.5, 3.5], "61": [5.8, 5.1, 4.0], "64": [8.8, 7.7, 6.8, 5.8]};
   repeat_prev = false;
   cimgs = [];
   cimg_names = [];
