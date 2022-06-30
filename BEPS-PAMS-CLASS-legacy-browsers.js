@@ -1929,6 +1929,7 @@ function wipeRoutineEnd() {
     hide(GLOBAL_CONT);
     psychoJS.experiment.addData("end_timestamp", util.MonotonicClock.getDateStr());
     psychoJS.experiment.addData("total_seconds", globalClock.getTime());
+    psychoJS.experiment.addData("expVersion", "2022.06.28");
     
     // the Routine "wipe" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
