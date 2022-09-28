@@ -1,4 +1,4 @@
-# BEPS-PAMS-CLASS
+# [DEPRECATED] BEPS-PAMS-CLASS
 
 Link to current version: [BEPS-PAMS-CLASS](https://intr-eeg.github.io/BEPS-PAMS-CLASS/)
 
